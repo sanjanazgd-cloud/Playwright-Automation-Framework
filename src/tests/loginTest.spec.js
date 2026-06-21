@@ -7,5 +7,6 @@ test('Login test', async ({ page }) => {
     await loginPage.fillPassword("Sanjana@09");
 
     const homePage = await loginPage.clickLoginButton();
+    await page.pause();
     await homePage.expectWelcomeTitleTobeVisible();
 });
